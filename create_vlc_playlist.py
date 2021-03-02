@@ -59,5 +59,5 @@ def create_playlist(song_files, music_dir):
         playlist.add_track(path)
 
     playlist_xml = playlist.get_playlist()
-    with open(os.join(os.expanduser(music_dir), "songs.xspf"), "w") as mf:
+    with open(os.path.join(os.path.expanduser(music_dir), "songs.xspf"), "w") as mf:
         mf.write(xml.tostring(playlist_xml).decode("utf-8"))
